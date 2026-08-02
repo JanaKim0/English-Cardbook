@@ -100,6 +100,30 @@ export const ru = {
   'study.emptyDeck': 'В этой колоде пока нет слов.',
   'study.emptyFavorites': 'В избранном пока нет слов.',
   'study.noSource': 'Источник не указан',
+
+  'lessons.add': 'Добавить занятие',
+  'lessons.empty': 'Журнал пока пуст. Запишите первое занятие.',
+  'lessons.notFound': 'Ничего не найдено.',
+  'lessons.search': 'Поиск по темам, преподавателю и заметкам',
+  'lessons.total': 'Всего занятий: {count}',
+  'lessons.found': 'Найдено: {count}',
+
+  'lesson.newTitle': 'Новое занятие',
+  'lesson.editTitle': 'Изменить занятие',
+  'lesson.date': 'Дата',
+  'lesson.teacher': 'Преподаватель',
+  'lesson.teacherPlaceholder': 'Например, Иван',
+  'lesson.duration': 'Продолжительность, мин',
+  'lesson.durationPlaceholder': 'Например, 60',
+  'lesson.durationValue': '{count} мин',
+  'lesson.topics': 'Что проходили',
+  'lesson.topicsPlaceholder': 'Present Simple, Present Continuous, Small Talk',
+  'lesson.notes': 'Дополнительные заметки',
+  'lesson.notesPlaceholder': 'Домашнее задание, что повторить, на что обратить внимание',
+  'lesson.optional': 'Необязательно',
+  'lesson.deleteTitle': 'Удаление занятия',
+  'lesson.deleteConfirm':
+    'Удалить запись о занятии от {date}? Это действие нельзя отменить.',
 } as const
 
 export type TranslationKey = keyof typeof ru
@@ -203,6 +227,30 @@ export const en: Record<TranslationKey, string> = {
   'study.emptyDeck': 'This deck has no words yet.',
   'study.emptyFavorites': 'Nothing in favorites yet.',
   'study.noSource': 'No source given',
+
+  'lessons.add': 'Add lesson',
+  'lessons.empty': 'Your journal is empty. Record your first lesson.',
+  'lessons.notFound': 'Nothing found.',
+  'lessons.search': 'Search topics, teacher and notes',
+  'lessons.total': 'Lessons: {count}',
+  'lessons.found': 'Found: {count}',
+
+  'lesson.newTitle': 'New lesson',
+  'lesson.editTitle': 'Edit lesson',
+  'lesson.date': 'Date',
+  'lesson.teacher': 'Teacher',
+  'lesson.teacherPlaceholder': 'For example, Ivan',
+  'lesson.duration': 'Duration, min',
+  'lesson.durationPlaceholder': 'For example, 60',
+  'lesson.durationValue': '{count} min',
+  'lesson.topics': 'What we covered',
+  'lesson.topicsPlaceholder': 'Present Simple, Present Continuous, Small Talk',
+  'lesson.notes': 'Additional notes',
+  'lesson.notesPlaceholder': 'Homework, what to revise, what to watch out for',
+  'lesson.optional': 'Optional',
+  'lesson.deleteTitle': 'Delete lesson',
+  'lesson.deleteConfirm':
+    'Delete the lesson from {date}? This cannot be undone.',
 }
 
 export const translations: Record<Language, Record<TranslationKey, string>> = {

@@ -6,13 +6,16 @@ import App from './App.tsx'
 import { SettingsProvider } from './shared/lib/SettingsProvider'
 import { WordsProvider } from './features/dictionary/WordsProvider'
 import { DecksProvider } from './features/decks/DecksProvider'
+import { LessonsProvider } from './features/lessons/LessonsProvider'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <SettingsProvider>
       <WordsProvider>
         <DecksProvider>
-          <App />
+          <LessonsProvider>
+            <App />
+          </LessonsProvider>
         </DecksProvider>
       </WordsProvider>
     </SettingsProvider>

@@ -4,6 +4,7 @@ import { DictionaryPage } from './pages/DictionaryPage'
 import { DecksPage } from './pages/DecksPage'
 import { DeckEditorPage } from './pages/DeckEditorPage'
 import { StudyPage } from './pages/StudyPage'
+import { LessonsPage } from './pages/LessonsPage'
 import { PlaceholderPage } from './pages/PlaceholderPage'
 import { SettingsPage } from './pages/SettingsPage'
 
@@ -23,15 +24,7 @@ function App() {
           <Route path="/decks/new" element={<DeckEditorPage />} />
           <Route path="/decks/:deckId" element={<DeckEditorPage />} />
           <Route path="/study" element={<StudyPage />} />
-          <Route
-            path="/lessons"
-            element={
-              <PlaceholderPage
-                titleKey="page.lessons.title"
-                subtitleKey="page.lessons.subtitle"
-              />
-            }
-          />
+          <Route path="/lessons" element={<LessonsPage />} />
           <Route
             path="/grammar"
             element={

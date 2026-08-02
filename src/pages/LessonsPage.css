@@ -1,0 +1,120 @@
+.lessons-search {
+  width: 100%;
+  padding: 9px var(--space-md);
+  margin-bottom: var(--space-md);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  transition: border-color 0.15s ease;
+}
+
+.lessons-search:hover {
+  border-color: var(--accent);
+}
+
+.lessons-search::placeholder {
+  color: var(--text-muted);
+}
+
+.lessons-count {
+  margin-bottom: var(--space-md);
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.lessons-empty {
+  padding: var(--space-xl);
+  background: var(--surface);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-md);
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.lesson-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lesson-card {
+  padding: var(--space-md);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  transition: border-color 0.15s ease;
+}
+
+.lesson-card:hover {
+  border-color: var(--accent);
+}
+
+.lesson-card__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+
+.lesson-card__date {
+  font-weight: 600;
+}
+
+.lesson-card__meta {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.lesson-card__actions {
+  display: flex;
+  gap: var(--space-xs);
+  flex-shrink: 0;
+}
+
+.lesson-card__block {
+  margin-top: var(--space-md);
+}
+
+.lesson-card__label {
+  margin-bottom: 2px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+}
+
+/* Списки тем пишутся в несколько строк — переносы нужно сохранить. */
+.lesson-card__text {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.lesson-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.lesson-form__row {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.lesson-form__row > * {
+  flex: 1;
+  min-width: 0;
+}
+
+@media (max-width: 720px) {
+  .lesson-card__head {
+    flex-wrap: wrap;
+  }
+
+  .lesson-card__actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
