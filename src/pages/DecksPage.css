@@ -1,0 +1,64 @@
+.decks-empty {
+  padding: var(--space-xl);
+  background: var(--surface);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-md);
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.decks-count {
+  margin-bottom: var(--space-md);
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.deck-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.deck-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  transition: border-color 0.15s ease;
+}
+
+.deck-card:hover {
+  border-color: var(--accent);
+}
+
+.deck-card__main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.deck-card__name {
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.deck-card__count {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.deck-card__actions {
+  display: flex;
+  gap: var(--space-xs);
+  flex-shrink: 0;
+}

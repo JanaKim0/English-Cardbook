@@ -17,6 +17,10 @@ interface WordFormDialogProps {
 
 const emptyInput: WordInput = { term: '', translation: '', source: '' }
 
+/** С запасом на целые фразы, а не только отдельные слова. */
+const MAX_TERM_LENGTH = 200
+const MAX_SOURCE_LENGTH = 120
+
 export function WordFormDialog({
   open,
   word,
@@ -59,6 +63,7 @@ export function WordFormDialog({
           label={t('word.term')}
           placeholder={t('word.termPlaceholder')}
           value={input.term}
+          maxLength={MAX_TERM_LENGTH}
           autoFocus
           onChange={(event) =>
             setInput((current) => ({ ...current, term: event.target.value }))
@@ -68,6 +73,7 @@ export function WordFormDialog({
           label={t('word.translation')}
           placeholder={t('word.translationPlaceholder')}
           value={input.translation}
+          maxLength={MAX_TERM_LENGTH}
           onChange={(event) =>
             setInput((current) => ({
               ...current,
@@ -80,6 +86,7 @@ export function WordFormDialog({
           hint={t('word.sourceHint')}
           placeholder={t('word.sourcePlaceholder')}
           value={input.source}
+          maxLength={MAX_SOURCE_LENGTH}
           onChange={(event) =>
             setInput((current) => ({ ...current, source: event.target.value }))
           }

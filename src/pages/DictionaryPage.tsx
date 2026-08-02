@@ -4,6 +4,7 @@ import { Button } from '../shared/ui/Button'
 import { ConfirmDialog } from '../shared/ui/ConfirmDialog'
 import { useSettings } from '../shared/lib/useSettings'
 import { useWords } from '../features/dictionary/useWords'
+import { useDecks } from '../features/decks/useDecks'
 import { WordCard } from '../features/dictionary/WordCard'
 import { WordFormDialog } from '../features/dictionary/WordFormDialog'
 import type { WordInput } from '../features/dictionary/words-context'
@@ -13,6 +14,7 @@ import './DictionaryPage.css'
 export function DictionaryPage() {
   const { t } = useSettings()
   const { words, addWord, updateWord, deleteWord, toggleFavorite } = useWords()
+  const { decks, detachWord } = useDecks()
 
   const [query, setQuery] = useState('')
   const [onlyFavorites, setOnlyFavorites] = useState(false)
@@ -54,9 +56,16 @@ export function DictionaryPage() {
   }
 
   const confirmDelete = () => {
-    if (wordToDelete) deleteWord(wordToDelete.id)
+    if (wordToDelete) {
+      // Слово убирается и из словаря, и из всех колод, где оно было.
+      detachWord(wordToDelete.id)
+      deleteWord(wordToDelete.id)
+    }
     setWordToDelete(null)
   }
+
+  const deckNamesOf = (wordId: string) =>
+    decks.filter((deck) => deck.wordIds.includes(wordId)).map((deck) => deck.name)
 
   const emptyMessage = () => {
     if (words.length === 0) return t('dictionary.empty')
@@ -109,6 +118,7 @@ export function DictionaryPage() {
             <WordCard
               key={word.id}
               word={word}
+              deckNames={deckNamesOf(word.id)}
               onEdit={() => openEditForm(word)}
               onDelete={() => setWordToDelete(word)}
               onToggleFavorite={() => toggleFavorite(word.id)}

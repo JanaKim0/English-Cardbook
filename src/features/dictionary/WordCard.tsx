@@ -4,6 +4,8 @@ import type { Word } from '../../shared/types/models'
 
 interface WordCardProps {
   word: Word
+  /** Колоды, в которые входит слово; пустой список ничего не показывает. */
+  deckNames: string[]
   onEdit: () => void
   onDelete: () => void
   onToggleFavorite: () => void
@@ -11,6 +13,7 @@ interface WordCardProps {
 
 export function WordCard({
   word,
+  deckNames,
   onEdit,
   onDelete,
   onToggleFavorite,
@@ -43,6 +46,15 @@ export function WordCard({
         {word.source && (
           <p className="word-card__source">
             {t('word.from')} {word.source}
+          </p>
+        )}
+        {deckNames.length > 0 && (
+          <p className="word-card__decks">
+            {deckNames.map((name) => (
+              <span key={name} className="word-card__deck">
+                {name}
+              </span>
+            ))}
           </p>
         )}
       </div>

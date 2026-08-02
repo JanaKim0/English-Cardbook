@@ -5,12 +5,15 @@ import './index.css'
 import App from './App.tsx'
 import { SettingsProvider } from './shared/lib/SettingsProvider'
 import { WordsProvider } from './features/dictionary/WordsProvider'
+import { DecksProvider } from './features/decks/DecksProvider'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <SettingsProvider>
       <WordsProvider>
-        <App />
+        <DecksProvider>
+          <App />
+        </DecksProvider>
       </WordsProvider>
     </SettingsProvider>
   </StrictMode>,

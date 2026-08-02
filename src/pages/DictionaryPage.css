@@ -107,6 +107,23 @@
   overflow-wrap: anywhere;
 }
 
+/* Метки колод намеренно неброские: если слово ни в одной колоде, тут пусто. */
+.word-card__decks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-top: var(--space-sm);
+}
+
+.word-card__deck {
+  padding: 2px var(--space-sm);
+  background: var(--surface-alt);
+  border-radius: 999px;
+  font-size: 11px;
+  color: var(--text-muted);
+  overflow-wrap: anywhere;
+}
+
 .word-card__actions {
   display: flex;
   gap: var(--space-xs);

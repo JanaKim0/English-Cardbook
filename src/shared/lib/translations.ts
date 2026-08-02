@@ -63,6 +63,27 @@ export const ru = {
   'word.removeFromFavorites': 'Убрать из избранного',
   'word.deleteConfirm': 'Удалить слово «{term}»? Это действие нельзя отменить.',
   'word.deleteTitle': 'Удаление слова',
+
+  'decks.create': 'Создать колоду',
+  'decks.empty': 'Колод пока нет. Создайте первую.',
+  'decks.wordCount': 'Слов: {count}',
+  'decks.total': 'Всего колод: {count}',
+  'decks.needWords': 'Сначала добавьте слова в словарь — из них собираются колоды.',
+
+  'deck.newTitle': 'Новая колода',
+  'deck.newSubtitle': 'Отметьте слова, которые войдут в колоду',
+  'deck.editTitle': 'Изменение колоды',
+  'deck.editSubtitle': 'Измените название или состав колоды',
+  'deck.name': 'Название колоды',
+  'deck.namePlaceholder': 'Например, Фрукты',
+  'deck.selected': 'Выбрано слов: {count}',
+  'deck.searchWords': 'Поиск по словарю',
+  'deck.notFound': 'Ничего не найдено.',
+  'deck.deleteTitle': 'Удаление колоды',
+  'deck.deleteConfirm':
+    'Удалить колоду «{name}»? Сами слова останутся в словаре.',
+  'deck.notFoundTitle': 'Колода не найдена',
+  'deck.backToDecks': 'Вернуться к колодам',
 } as const
 
 export type TranslationKey = keyof typeof ru
@@ -129,6 +150,27 @@ export const en: Record<TranslationKey, string> = {
   'word.removeFromFavorites': 'Remove from favorites',
   'word.deleteConfirm': 'Delete the word “{term}”? This cannot be undone.',
   'word.deleteTitle': 'Delete word',
+
+  'decks.create': 'Create deck',
+  'decks.empty': 'No decks yet. Create your first one.',
+  'decks.wordCount': 'Words: {count}',
+  'decks.total': 'Decks: {count}',
+  'decks.needWords': 'Add some words to the dictionary first — decks are built from them.',
+
+  'deck.newTitle': 'New deck',
+  'deck.newSubtitle': 'Tick the words you want in this deck',
+  'deck.editTitle': 'Edit deck',
+  'deck.editSubtitle': 'Change the name or the contents of the deck',
+  'deck.name': 'Deck name',
+  'deck.namePlaceholder': 'For example, Fruit',
+  'deck.selected': 'Selected: {count}',
+  'deck.searchWords': 'Search the dictionary',
+  'deck.notFound': 'Nothing found.',
+  'deck.deleteTitle': 'Delete deck',
+  'deck.deleteConfirm':
+    'Delete the deck “{name}”? The words themselves stay in your dictionary.',
+  'deck.notFoundTitle': 'Deck not found',
+  'deck.backToDecks': 'Back to decks',
 }
 
 export const translations: Record<Language, Record<TranslationKey, string>> = {
