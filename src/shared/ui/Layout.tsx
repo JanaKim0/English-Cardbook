@@ -9,6 +9,7 @@ const navItems: { to: string; labelKey: TranslationKey; icon: string }[] = [
   { to: '/study', labelKey: 'nav.study', icon: '🎴' },
   { to: '/lessons', labelKey: 'nav.lessons', icon: '📅' },
   { to: '/grammar', labelKey: 'nav.grammar', icon: '✏️' },
+  { to: '/stats', labelKey: 'nav.stats', icon: '📊' },
   { to: '/settings', labelKey: 'nav.settings', icon: '⚙️' },
 ]
 

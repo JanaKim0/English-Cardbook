@@ -7,6 +7,8 @@ import { StudyPage } from './pages/StudyPage'
 import { LessonsPage } from './pages/LessonsPage'
 import { GrammarPage } from './pages/GrammarPage'
 import { GrammarNotePage } from './pages/GrammarNotePage'
+import { QuizPage } from './pages/QuizPage'
+import { StatsPage } from './pages/StatsPage'
 import { SettingsPage } from './pages/SettingsPage'
 
 /**
@@ -25,6 +27,8 @@ function App() {
           <Route path="/decks/new" element={<DeckEditorPage />} />
           <Route path="/decks/:deckId" element={<DeckEditorPage />} />
           <Route path="/study" element={<StudyPage />} />
+          <Route path="/study/quiz" element={<QuizPage />} />
+          <Route path="/stats" element={<StatsPage />} />
           <Route path="/lessons" element={<LessonsPage />} />
           <Route path="/grammar" element={<GrammarPage />} />
           <Route path="/grammar/:noteId" element={<GrammarNotePage />} />

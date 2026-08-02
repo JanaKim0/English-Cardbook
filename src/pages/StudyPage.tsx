@@ -5,6 +5,7 @@ import { useSettings } from '../shared/lib/useSettings'
 import { useWords } from '../features/dictionary/useWords'
 import { useDecks } from '../features/decks/useDecks'
 import { useShuffledQueue } from '../features/study/useShuffledQueue'
+import { StudyTabs } from '../features/study/StudyTabs'
 import './StudyPage.css'
 
 /** Что учим: весь словарь, избранное или конкретная колода. */
@@ -82,6 +83,8 @@ export function StudyPage() {
         title={t('page.study.title')}
         subtitle={t('page.study.subtitle')}
       />
+
+      <StudyTabs />
 
       <div className="study-controls">
         <label className="study-control">

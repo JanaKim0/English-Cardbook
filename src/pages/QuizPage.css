@@ -1,0 +1,116 @@
+.quiz-empty {
+  padding: var(--space-xl);
+  background: var(--surface);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-md);
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.quiz-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-xl);
+}
+
+.quiz-result__title {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.quiz-result__score {
+  color: var(--text-muted);
+}
+
+.quiz-progress {
+  margin-bottom: var(--space-sm);
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.quiz-card {
+  max-width: 560px;
+  padding: var(--space-lg);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+
+.quiz-term {
+  font-size: 26px;
+  font-weight: 600;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.quiz-hint {
+  margin-top: var(--space-xs);
+  margin-bottom: var(--space-lg);
+  font-size: 13px;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.quiz-options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.quiz-option {
+  width: 100%;
+  padding: var(--space-md);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  text-align: left;
+  overflow-wrap: anywhere;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.quiz-option:hover:not(:disabled) {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.quiz-option:disabled {
+  cursor: default;
+}
+
+/* Правильный вариант подсвечивается всегда — чтобы запомнить верный ответ. */
+.quiz-option--correct {
+  border-color: #4d9c78;
+  background: rgba(77, 156, 120, 0.12);
+  font-weight: 600;
+}
+
+.quiz-option--wrong {
+  border-color: #c2506a;
+  background: rgba(194, 80, 106, 0.1);
+}
+
+.quiz-feedback {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+  margin-top: var(--space-lg);
+}
+
+.quiz-feedback__text {
+  color: var(--text-muted);
+  overflow-wrap: anywhere;
+}
+
+.quiz-feedback__text--correct {
+  color: #3f8465;
+  font-weight: 600;
+}

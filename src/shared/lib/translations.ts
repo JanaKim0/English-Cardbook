@@ -10,6 +10,7 @@ export const ru = {
   'nav.study': 'Обучение',
   'nav.lessons': 'Занятия',
   'nav.grammar': 'Грамматика',
+  'nav.stats': 'Статистика',
   'nav.settings': 'Настройки',
 
   'page.dictionary.title': 'Словарь',
@@ -22,6 +23,10 @@ export const ru = {
   'page.lessons.subtitle': 'Журнал уроков с преподавателем',
   'page.grammar.title': 'Грамматика',
   'page.grammar.subtitle': 'Собственная база конспектов',
+  'page.stats.title': 'Статистика',
+  'page.stats.subtitle': 'Сколько всего накопилось',
+  'page.quiz.title': 'Обучение',
+  'page.quiz.subtitle': 'Тест по случайным словам из всего словаря',
   'page.settings.title': 'Настройки',
   'page.settings.subtitle': 'Оформление и язык интерфейса',
 
@@ -153,6 +158,36 @@ export const ru = {
   'editor.bulletListTitle': 'Маркированный список',
   'editor.numberedListTitle': 'Нумерованный список',
   'editor.clearFormatTitle': 'Убрать форматирование',
+
+  'stats.words': 'Слов в словаре',
+  'stats.favorites': 'В избранном',
+  'stats.decks': 'Колод',
+  'stats.lessons': 'Проведённых занятий',
+  'stats.lessonTime': 'Время занятий',
+  'stats.notes': 'Конспектов',
+  'stats.duration': '{hours} ч {minutes} мин',
+  'stats.durationMinutes': '{minutes} мин',
+  'stats.sources': 'Откуда взялись слова',
+  'stats.sourcesEmpty':
+    'Пока ни у одного слова не указано, откуда оно взялось.',
+  'stats.noSource': 'Источник не указан',
+  'stats.decksTitle': 'Слова по колодам',
+  'stats.decksEmpty': 'Колод пока нет.',
+
+  'study.tabCards': 'Карточки',
+  'study.tabQuiz': 'Тест',
+
+  'quiz.needWords': 'Для теста нужно хотя бы два слова в словаре.',
+  'quiz.start': 'Начать тест',
+  'quiz.question': 'Вопрос {current} из {total}',
+  'quiz.pickTranslation': 'Выберите перевод',
+  'quiz.next': 'Дальше',
+  'quiz.finish': 'Показать результат',
+  'quiz.correct': 'Верно',
+  'quiz.wrong': 'Правильный ответ: {answer}',
+  'quiz.resultTitle': 'Тест пройден',
+  'quiz.result': 'Правильных ответов: {correct} из {total}',
+  'quiz.restart': 'Пройти ещё раз',
 } as const
 
 export type TranslationKey = keyof typeof ru
@@ -166,6 +201,7 @@ export const en: Record<TranslationKey, string> = {
   'nav.study': 'Study',
   'nav.lessons': 'Lessons',
   'nav.grammar': 'Grammar',
+  'nav.stats': 'Statistics',
   'nav.settings': 'Settings',
 
   'page.dictionary.title': 'Dictionary',
@@ -178,6 +214,10 @@ export const en: Record<TranslationKey, string> = {
   'page.lessons.subtitle': 'A journal of lessons with your teacher',
   'page.grammar.title': 'Grammar',
   'page.grammar.subtitle': 'Your own collection of notes',
+  'page.stats.title': 'Statistics',
+  'page.stats.subtitle': 'How much you have collected so far',
+  'page.quiz.title': 'Study',
+  'page.quiz.subtitle': 'A quiz on random words from your whole dictionary',
   'page.settings.title': 'Settings',
   'page.settings.subtitle': 'Appearance and interface language',
 
@@ -308,6 +348,35 @@ export const en: Record<TranslationKey, string> = {
   'editor.bulletListTitle': 'Bulleted list',
   'editor.numberedListTitle': 'Numbered list',
   'editor.clearFormatTitle': 'Clear formatting',
+
+  'stats.words': 'Words in dictionary',
+  'stats.favorites': 'In favorites',
+  'stats.decks': 'Decks',
+  'stats.lessons': 'Lessons taken',
+  'stats.lessonTime': 'Time studied',
+  'stats.notes': 'Grammar notes',
+  'stats.duration': '{hours} h {minutes} min',
+  'stats.durationMinutes': '{minutes} min',
+  'stats.sources': 'Where the words came from',
+  'stats.sourcesEmpty': 'No word has a source recorded yet.',
+  'stats.noSource': 'No source given',
+  'stats.decksTitle': 'Words per deck',
+  'stats.decksEmpty': 'No decks yet.',
+
+  'study.tabCards': 'Flashcards',
+  'study.tabQuiz': 'Quiz',
+
+  'quiz.needWords': 'You need at least two words in your dictionary.',
+  'quiz.start': 'Start quiz',
+  'quiz.question': 'Question {current} of {total}',
+  'quiz.pickTranslation': 'Pick the translation',
+  'quiz.next': 'Next',
+  'quiz.finish': 'Show result',
+  'quiz.correct': 'Correct',
+  'quiz.wrong': 'Correct answer: {answer}',
+  'quiz.resultTitle': 'Quiz finished',
+  'quiz.result': 'Correct answers: {correct} of {total}',
+  'quiz.restart': 'Try again',
 }
 
 export const translations: Record<Language, Record<TranslationKey, string>> = {
