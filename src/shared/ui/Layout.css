@@ -64,6 +64,28 @@
   line-height: 1;
 }
 
+/* Подпись прижата к низу боковой панели. */
+.sidebar__footer {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: auto;
+  padding: var(--space-md) var(--space-sm) 0;
+  border-top: 1px solid var(--border);
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.sidebar__source {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.sidebar__source:hover {
+  color: var(--accent-strong);
+  text-decoration: underline;
+}
+
 .content {
   padding: var(--space-xl);
   overflow-y: auto;
@@ -82,6 +104,13 @@
   .sidebar__nav {
     flex-direction: row;
     flex-wrap: wrap;
+  }
+
+  /* Панель наверху узкая — подпись ставим в строку, чтобы не занимать высоту. */
+  .sidebar__footer {
+    flex-direction: row;
+    gap: var(--space-sm);
+    padding-top: var(--space-sm);
   }
 
   .content {

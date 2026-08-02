@@ -3,6 +3,7 @@ import { PageHeader } from '../shared/ui/PageHeader'
 import { Button } from '../shared/ui/Button'
 import { useSettings } from '../shared/lib/useSettings'
 import { useWords } from '../features/dictionary/useWords'
+import { useDecks } from '../features/decks/useDecks'
 import { StudyTabs } from '../features/study/StudyTabs'
 import { generateQuiz } from '../features/quiz/generateQuiz'
 import type { QuizQuestion } from '../features/quiz/generateQuiz'
@@ -14,6 +15,7 @@ const MIN_WORDS = 2
 export function QuizPage() {
   const { t } = useSettings()
   const { words } = useWords()
+  const { decks } = useDecks()
 
   const [questions, setQuestions] = useState<QuizQuestion[] | null>(null)
   const [index, setIndex] = useState(0)
@@ -22,7 +24,7 @@ export function QuizPage() {
   const [finished, setFinished] = useState(false)
 
   const start = () => {
-    setQuestions(generateQuiz(words))
+    setQuestions(generateQuiz(words, decks))
     setIndex(0)
     setChosen(null)
     setCorrectCount(0)

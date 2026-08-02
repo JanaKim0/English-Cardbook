@@ -40,6 +40,18 @@ export function Layout() {
             </NavLink>
           ))}
         </nav>
+
+        <footer className="sidebar__footer">
+          <span className="sidebar__author">Jana Kim</span>
+          <a
+            className="sidebar__source"
+            href="https://github.com/JanaKim0/English-Cardbook"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {t('app.sourceCode')}
+          </a>
+        </footer>
       </aside>
 
       <main className="content">

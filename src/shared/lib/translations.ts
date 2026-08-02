@@ -4,6 +4,7 @@ export type ThemeName = 'pink' | 'gray'
 export const ru = {
   'app.name': 'English Cardbook',
   'app.tagline': 'Личный помощник в изучении английского',
+  'app.sourceCode': 'Код на GitHub',
 
   'nav.dictionary': 'Словарь',
   'nav.decks': 'Колоды',
@@ -207,6 +208,7 @@ export type TranslationKey = keyof typeof ru
 export const en: Record<TranslationKey, string> = {
   'app.name': 'English Cardbook',
   'app.tagline': 'A personal companion for learning English',
+  'app.sourceCode': 'Source on GitHub',
 
   'nav.dictionary': 'Dictionary',
   'nav.decks': 'Decks',
