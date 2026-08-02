@@ -1,0 +1,49 @@
+/**
+ * Темы оформления. Активная тема выбирается атрибутом data-theme на <html>,
+ * который выставляет SettingsProvider. Все компоненты используют только
+ * переменные отсюда — благодаря этому тема меняется мгновенно и целиком.
+ */
+
+:root {
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+
+  --sidebar-width: 240px;
+}
+
+/* Soft Pink — нежно-розовая светлая тема. */
+:root[data-theme='pink'] {
+  --bg: #fdf6f8;
+  --surface: #ffffff;
+  --surface-alt: #fbeef2;
+  --border: #f3dee5;
+  --text: #4a3b41;
+  --text-muted: #a08a93;
+  --accent: #dd8ba7;
+  --accent-strong: #c96f8f;
+  --accent-soft: #fceef3;
+  --on-accent: #ffffff;
+  --shadow: 0 4px 16px rgba(197, 141, 161, 0.14);
+}
+
+/* Soft Gray — минималистичная светло-серая тема. */
+:root[data-theme='gray'] {
+  --bg: #f6f6f7;
+  --surface: #ffffff;
+  --surface-alt: #efeff1;
+  --border: #e2e2e6;
+  --text: #3b3b40;
+  --text-muted: #8d8d95;
+  --accent: #7e7e8a;
+  --accent-strong: #63636e;
+  --accent-soft: #eeeef1;
+  --on-accent: #ffffff;
+  --shadow: 0 4px 16px rgba(60, 60, 70, 0.1);
+}
