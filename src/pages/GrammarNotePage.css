@@ -1,0 +1,25 @@
+.note-title {
+  width: 100%;
+  padding: var(--space-sm) var(--space-md);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 18px;
+  font-weight: 600;
+  transition: border-color 0.15s ease;
+}
+
+.note-title:hover {
+  border-color: var(--accent);
+}
+
+.note-title::placeholder {
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+.note-status {
+  margin: var(--space-sm) 0;
+  font-size: 12px;
+  color: var(--text-muted);
+}

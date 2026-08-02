@@ -7,6 +7,7 @@ import { SettingsProvider } from './shared/lib/SettingsProvider'
 import { WordsProvider } from './features/dictionary/WordsProvider'
 import { DecksProvider } from './features/decks/DecksProvider'
 import { LessonsProvider } from './features/lessons/LessonsProvider'
+import { GrammarProvider } from './features/grammar/GrammarProvider'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -14,7 +15,9 @@ createRoot(document.getElementById('root')!).render(
       <WordsProvider>
         <DecksProvider>
           <LessonsProvider>
-            <App />
+            <GrammarProvider>
+              <App />
+            </GrammarProvider>
           </LessonsProvider>
         </DecksProvider>
       </WordsProvider>

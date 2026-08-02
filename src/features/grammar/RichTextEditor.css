@@ -1,0 +1,80 @@
+.editor {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.editor__toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  padding: var(--space-sm);
+  background: var(--surface-alt);
+  border-bottom: 1px solid var(--border);
+}
+
+.editor-button {
+  min-width: 34px;
+  height: 32px;
+  padding: 0 var(--space-sm);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.editor-button:hover {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.editor-button--bold {
+  font-weight: 700;
+}
+
+.editor-button--italic {
+  font-style: italic;
+}
+
+.editor-button--underline {
+  text-decoration: underline;
+}
+
+.editor__content {
+  min-height: 420px;
+  padding: var(--space-lg);
+  outline: none;
+  overflow-wrap: anywhere;
+}
+
+/* Подсказка видна, пока в конспекте ничего не написано. */
+.editor__content:empty::before {
+  content: attr(data-placeholder);
+  color: var(--text-muted);
+}
+
+.editor__content h2 {
+  margin: var(--space-lg) 0 var(--space-sm);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.editor__content h2:first-child {
+  margin-top: 0;
+}
+
+.editor__content p {
+  margin-bottom: var(--space-sm);
+}
+
+.editor__content ul,
+.editor__content ol {
+  margin: 0 0 var(--space-sm);
+  padding-left: var(--space-lg);
+}
+
+.editor__content li {
+  margin-bottom: var(--space-xs);
+}

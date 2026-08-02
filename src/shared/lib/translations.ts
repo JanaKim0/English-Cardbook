@@ -34,7 +34,6 @@ export const ru = {
   'settings.language.ru': 'Русский',
   'settings.language.en': 'English',
 
-  'common.comingSoon': 'Этот раздел появится на следующих этапах.',
   'common.save': 'Сохранить',
   'common.cancel': 'Отмена',
   'common.edit': 'Изменить',
@@ -124,6 +123,36 @@ export const ru = {
   'lesson.deleteTitle': 'Удаление занятия',
   'lesson.deleteConfirm':
     'Удалить запись о занятии от {date}? Это действие нельзя отменить.',
+
+  'grammar.add': 'Новая тема',
+  'grammar.empty': 'Конспектов пока нет. Создайте первую тему.',
+  'grammar.notFound': 'Ничего не найдено.',
+  'grammar.search': 'Поиск по названиям и содержимому',
+  'grammar.total': 'Всего тем: {count}',
+  'grammar.found': 'Найдено: {count}',
+  'grammar.untitled': 'Без названия',
+  'grammar.noText': 'Пустой конспект',
+  'grammar.updated': 'Изменён {date}',
+  'grammar.back': 'Все темы',
+  'grammar.titlePlaceholder': 'Название темы, например Present Simple',
+  'grammar.contentPlaceholder': 'Здесь можно писать конспект…',
+  'grammar.saving': 'Сохранение…',
+  'grammar.saved': 'Все изменения сохранены',
+  'grammar.deleteTitle': 'Удаление темы',
+  'grammar.deleteConfirm':
+    'Удалить тему «{title}»? Это действие нельзя отменить.',
+  'grammar.noteNotFound': 'Тема не найдена',
+
+  'editor.bold': 'Ж',
+  'editor.boldTitle': 'Жирный',
+  'editor.italic': 'К',
+  'editor.italicTitle': 'Курсив',
+  'editor.underline': 'Ч',
+  'editor.underlineTitle': 'Подчёркнутый',
+  'editor.headingTitle': 'Заголовок',
+  'editor.bulletListTitle': 'Маркированный список',
+  'editor.numberedListTitle': 'Нумерованный список',
+  'editor.clearFormatTitle': 'Убрать форматирование',
 } as const
 
 export type TranslationKey = keyof typeof ru
@@ -161,7 +190,6 @@ export const en: Record<TranslationKey, string> = {
   'settings.language.ru': 'Русский',
   'settings.language.en': 'English',
 
-  'common.comingSoon': 'This section is coming in the next stages.',
   'common.save': 'Save',
   'common.cancel': 'Cancel',
   'common.edit': 'Edit',
@@ -251,6 +279,35 @@ export const en: Record<TranslationKey, string> = {
   'lesson.deleteTitle': 'Delete lesson',
   'lesson.deleteConfirm':
     'Delete the lesson from {date}? This cannot be undone.',
+
+  'grammar.add': 'New topic',
+  'grammar.empty': 'No notes yet. Create your first topic.',
+  'grammar.notFound': 'Nothing found.',
+  'grammar.search': 'Search titles and contents',
+  'grammar.total': 'Topics: {count}',
+  'grammar.found': 'Found: {count}',
+  'grammar.untitled': 'Untitled',
+  'grammar.noText': 'Empty note',
+  'grammar.updated': 'Edited {date}',
+  'grammar.back': 'All topics',
+  'grammar.titlePlaceholder': 'Topic title, for example Present Simple',
+  'grammar.contentPlaceholder': 'Write your notes here…',
+  'grammar.saving': 'Saving…',
+  'grammar.saved': 'All changes saved',
+  'grammar.deleteTitle': 'Delete topic',
+  'grammar.deleteConfirm': 'Delete the topic “{title}”? This cannot be undone.',
+  'grammar.noteNotFound': 'Topic not found',
+
+  'editor.bold': 'B',
+  'editor.boldTitle': 'Bold',
+  'editor.italic': 'I',
+  'editor.italicTitle': 'Italic',
+  'editor.underline': 'U',
+  'editor.underlineTitle': 'Underline',
+  'editor.headingTitle': 'Heading',
+  'editor.bulletListTitle': 'Bulleted list',
+  'editor.numberedListTitle': 'Numbered list',
+  'editor.clearFormatTitle': 'Clear formatting',
 }
 
 export const translations: Record<Language, Record<TranslationKey, string>> = {

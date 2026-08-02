@@ -5,7 +5,8 @@ import { DecksPage } from './pages/DecksPage'
 import { DeckEditorPage } from './pages/DeckEditorPage'
 import { StudyPage } from './pages/StudyPage'
 import { LessonsPage } from './pages/LessonsPage'
-import { PlaceholderPage } from './pages/PlaceholderPage'
+import { GrammarPage } from './pages/GrammarPage'
+import { GrammarNotePage } from './pages/GrammarNotePage'
 import { SettingsPage } from './pages/SettingsPage'
 
 /**
@@ -25,15 +26,8 @@ function App() {
           <Route path="/decks/:deckId" element={<DeckEditorPage />} />
           <Route path="/study" element={<StudyPage />} />
           <Route path="/lessons" element={<LessonsPage />} />
-          <Route
-            path="/grammar"
-            element={
-              <PlaceholderPage
-                titleKey="page.grammar.title"
-                subtitleKey="page.grammar.subtitle"
-              />
-            }
-          />
+          <Route path="/grammar" element={<GrammarPage />} />
+          <Route path="/grammar/:noteId" element={<GrammarNotePage />} />
           <Route path="/settings" element={<SettingsPage />} />
           <Route path="*" element={<Navigate to="/dictionary" replace />} />
         </Route>
