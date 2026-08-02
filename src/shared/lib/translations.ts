@@ -63,6 +63,7 @@ export const ru = {
   'word.removeFromFavorites': 'Убрать из избранного',
   'word.deleteConfirm': 'Удалить слово «{term}»? Это действие нельзя отменить.',
   'word.deleteTitle': 'Удаление слова',
+  'word.duplicate': 'Такое слово уже есть в словаре: {translation}',
 
   'decks.create': 'Создать колоду',
   'decks.empty': 'Колод пока нет. Создайте первую.',
@@ -165,6 +166,7 @@ export const en: Record<TranslationKey, string> = {
   'word.removeFromFavorites': 'Remove from favorites',
   'word.deleteConfirm': 'Delete the word “{term}”? This cannot be undone.',
   'word.deleteTitle': 'Delete word',
+  'word.duplicate': 'This word is already in your dictionary: {translation}',
 
   'decks.create': 'Create deck',
   'decks.empty': 'No decks yet. Create your first one.',

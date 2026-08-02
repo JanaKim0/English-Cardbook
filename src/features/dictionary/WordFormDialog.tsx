@@ -1,6 +1,7 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import type { FormEvent } from 'react'
 import type { WordInput } from './words-context'
+import { useWords } from './useWords'
 import { Button } from '../../shared/ui/Button'
 import { Modal } from '../../shared/ui/Modal'
 import { TextField } from '../../shared/ui/TextField'
@@ -28,7 +29,25 @@ export function WordFormDialog({
   onClose,
 }: WordFormDialogProps) {
   const { t } = useSettings()
+  const { words } = useWords()
   const [input, setInput] = useState<WordInput>(emptyInput)
+
+  /**
+   * Слово с таким же написанием уже в словаре. Это предупреждение, а не запрет:
+   * у одного английского слова бывают разные значения (bank — и банк, и берег),
+   * и второй карточке на него есть право на существование.
+   */
+  const duplicate = useMemo(() => {
+    const normalized = input.term.trim().toLowerCase()
+    if (normalized.length === 0) return null
+
+    return (
+      words.find(
+        (item) =>
+          item.id !== word?.id && item.term.toLowerCase() === normalized,
+      ) ?? null
+    )
+  }, [words, input.term, word])
 
   // При каждом открытии форма заполняется данными слова или очищается.
   useEffect(() => {
@@ -69,6 +88,11 @@ export function WordFormDialog({
             setInput((current) => ({ ...current, term: event.target.value }))
           }
         />
+        {duplicate && (
+          <p className="word-form__warning">
+            {t('word.duplicate', { translation: duplicate.translation })}
+          </p>
+        )}
         <TextField
           label={t('word.translation')}
           placeholder={t('word.translationPlaceholder')}

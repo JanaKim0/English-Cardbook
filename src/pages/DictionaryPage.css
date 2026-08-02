@@ -136,6 +136,16 @@
   gap: var(--space-md);
 }
 
+/* Подсказка, а не ошибка: сохранить такое слово всё равно можно. */
+.word-form__warning {
+  margin-top: calc(var(--space-md) * -1 + var(--space-xs));
+  padding: var(--space-sm) var(--space-md);
+  background: var(--accent-soft);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  color: var(--accent-strong);
+}
+
 @media (max-width: 720px) {
   .word-card {
     flex-wrap: wrap;
