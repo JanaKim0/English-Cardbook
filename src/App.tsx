@@ -3,6 +3,7 @@ import { Layout } from './shared/ui/Layout'
 import { DictionaryPage } from './pages/DictionaryPage'
 import { DecksPage } from './pages/DecksPage'
 import { DeckEditorPage } from './pages/DeckEditorPage'
+import { StudyPage } from './pages/StudyPage'
 import { PlaceholderPage } from './pages/PlaceholderPage'
 import { SettingsPage } from './pages/SettingsPage'
 
@@ -21,15 +22,7 @@ function App() {
           <Route path="/decks" element={<DecksPage />} />
           <Route path="/decks/new" element={<DeckEditorPage />} />
           <Route path="/decks/:deckId" element={<DeckEditorPage />} />
-          <Route
-            path="/study"
-            element={
-              <PlaceholderPage
-                titleKey="page.study.title"
-                subtitleKey="page.study.subtitle"
-              />
-            }
-          />
+          <Route path="/study" element={<StudyPage />} />
           <Route
             path="/lessons"
             element={

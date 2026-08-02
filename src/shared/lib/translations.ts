@@ -84,6 +84,21 @@ export const ru = {
     'Удалить колоду «{name}»? Сами слова останутся в словаре.',
   'deck.notFoundTitle': 'Колода не найдена',
   'deck.backToDecks': 'Вернуться к колодам',
+
+  'study.source': 'Что учим',
+  'study.allWords': 'Весь словарь',
+  'study.favorites': 'Избранное',
+  'study.frontSide': 'Первой стороной',
+  'study.frontTerm': 'Слово',
+  'study.frontTranslation': 'Перевод',
+  'study.next': 'Следующая карточка',
+  'study.flipHint': 'Нажмите на карточку, чтобы перевернуть',
+  'study.progress': 'Карточка {current} из {total}',
+  'study.keyboardHint': 'Пробел — перевернуть, → — следующая',
+  'study.emptyDictionary': 'Сначала добавьте слова в словарь.',
+  'study.emptyDeck': 'В этой колоде пока нет слов.',
+  'study.emptyFavorites': 'В избранном пока нет слов.',
+  'study.noSource': 'Источник не указан',
 } as const
 
 export type TranslationKey = keyof typeof ru
@@ -171,6 +186,21 @@ export const en: Record<TranslationKey, string> = {
     'Delete the deck “{name}”? The words themselves stay in your dictionary.',
   'deck.notFoundTitle': 'Deck not found',
   'deck.backToDecks': 'Back to decks',
+
+  'study.source': 'What to study',
+  'study.allWords': 'Whole dictionary',
+  'study.favorites': 'Favorites',
+  'study.frontSide': 'Show first',
+  'study.frontTerm': 'Word',
+  'study.frontTranslation': 'Translation',
+  'study.next': 'Next card',
+  'study.flipHint': 'Click the card to flip it',
+  'study.progress': 'Card {current} of {total}',
+  'study.keyboardHint': 'Space to flip, → for the next card',
+  'study.emptyDictionary': 'Add some words to your dictionary first.',
+  'study.emptyDeck': 'This deck has no words yet.',
+  'study.emptyFavorites': 'Nothing in favorites yet.',
+  'study.noSource': 'No source given',
 }
 
 export const translations: Record<Language, Record<TranslationKey, string>> = {
