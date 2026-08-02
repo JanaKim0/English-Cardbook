@@ -108,6 +108,13 @@
   min-width: 0;
 }
 
+/* На узком экране дата и продолжительность в одну строку не помещаются. */
+@media (max-width: 520px) {
+  .lesson-form__row {
+    flex-direction: column;
+  }
+}
+
 @media (max-width: 720px) {
   .lesson-card__head {
     flex-wrap: wrap;

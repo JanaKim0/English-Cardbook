@@ -39,6 +39,18 @@ export const ru = {
   'settings.language.ru': 'Русский',
   'settings.language.en': 'English',
 
+  'settings.data': 'Резервная копия',
+  'settings.dataHint':
+    'Данные хранятся только в этом браузере. Если очистить его историю или переустановить систему, словарь пропадёт — поэтому копию стоит иногда сохранять к себе.',
+  'settings.export': 'Сохранить копию в файл',
+  'settings.import': 'Загрузить из файла',
+  'settings.importTitle': 'Загрузка резервной копии',
+  'settings.importConfirm':
+    'Заменить все текущие данные содержимым файла? Сейчас в словаре слов: {words}. Отменить это будет нельзя.',
+  'settings.importApply': 'Заменить данные',
+  'settings.importError':
+    'Не удалось прочитать файл: он повреждён или создан не этим приложением.',
+
   'common.save': 'Сохранить',
   'common.cancel': 'Отмена',
   'common.edit': 'Изменить',
@@ -229,6 +241,18 @@ export const en: Record<TranslationKey, string> = {
   'settings.language': 'Interface language',
   'settings.language.ru': 'Русский',
   'settings.language.en': 'English',
+
+  'settings.data': 'Backup',
+  'settings.dataHint':
+    'Your data lives only in this browser. Clearing its history or reinstalling the system wipes the dictionary, so it is worth saving a copy from time to time.',
+  'settings.export': 'Save a copy to a file',
+  'settings.import': 'Load from a file',
+  'settings.importTitle': 'Load a backup',
+  'settings.importConfirm':
+    'Replace all current data with the contents of this file? Your dictionary currently holds {words} words. This cannot be undone.',
+  'settings.importApply': 'Replace data',
+  'settings.importError':
+    'Could not read the file: it is damaged or was not created by this app.',
 
   'common.save': 'Save',
   'common.cancel': 'Cancel',

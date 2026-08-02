@@ -71,6 +71,30 @@
   color: var(--text-muted);
 }
 
+.settings-note {
+  max-width: 640px;
+  margin-bottom: var(--space-md);
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.backup-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.settings-error {
+  max-width: 640px;
+  margin-top: var(--space-md);
+  padding: var(--space-sm) var(--space-md);
+  background: rgba(194, 80, 106, 0.1);
+  border: 1px solid #c2506a;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  color: #a83e56;
+}
+
 .language-options {
   display: flex;
   gap: var(--space-sm);
