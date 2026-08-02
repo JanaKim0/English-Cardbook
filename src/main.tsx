@@ -4,11 +4,14 @@ import './styles/themes.css'
 import './index.css'
 import App from './App.tsx'
 import { SettingsProvider } from './shared/lib/SettingsProvider'
+import { WordsProvider } from './features/dictionary/WordsProvider'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <SettingsProvider>
-      <App />
+      <WordsProvider>
+        <App />
+      </WordsProvider>
     </SettingsProvider>
   </StrictMode>,
 )

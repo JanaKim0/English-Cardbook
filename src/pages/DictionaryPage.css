@@ -1,0 +1,131 @@
+.dictionary-toolbar {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-md);
+}
+
+.dictionary-search {
+  flex: 1;
+  min-width: 220px;
+  padding: 9px var(--space-md);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  transition: border-color 0.15s ease;
+}
+
+.dictionary-search:hover {
+  border-color: var(--accent);
+}
+
+.dictionary-search::placeholder {
+  color: var(--text-muted);
+}
+
+.filter-toggle--active {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--accent-strong);
+  font-weight: 600;
+}
+
+.dictionary-count {
+  margin-bottom: var(--space-md);
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.dictionary-empty {
+  padding: var(--space-xl);
+  background: var(--surface);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-md);
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.word-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.word-card {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  transition: border-color 0.15s ease;
+}
+
+.word-card:hover {
+  border-color: var(--accent);
+}
+
+.word-card__star {
+  padding: 0;
+  background: none;
+  border: none;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.word-card__star:hover,
+.word-card__star--active {
+  color: var(--accent);
+}
+
+.word-card__text {
+  flex: 1;
+  min-width: 0;
+}
+
+.word-card__term {
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.word-card__translation {
+  color: var(--text);
+  overflow-wrap: anywhere;
+}
+
+.word-card__source {
+  margin-top: var(--space-xs);
+  font-size: 12px;
+  color: var(--text-muted);
+  overflow-wrap: anywhere;
+}
+
+.word-card__actions {
+  display: flex;
+  gap: var(--space-xs);
+  flex-shrink: 0;
+}
+
+.word-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+@media (max-width: 720px) {
+  .word-card {
+    flex-wrap: wrap;
+  }
+
+  .word-card__actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}

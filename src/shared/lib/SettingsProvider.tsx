@@ -40,7 +40,15 @@ export function SettingsProvider({ children }: { children: ReactNode }) {
   )
 
   const t = useCallback(
-    (key: TranslationKey) => translations[settings.language][key],
+    (key: TranslationKey, params?: Record<string, string | number>) => {
+      const template = translations[settings.language][key]
+
+      if (!params) return template
+
+      return template.replace(/\{(\w+)\}/g, (match, name: string) =>
+        name in params ? String(params[name]) : match,
+      )
+    },
     [settings.language],
   )
 

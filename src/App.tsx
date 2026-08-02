@@ -1,5 +1,6 @@
 import { HashRouter, Navigate, Route, Routes } from 'react-router'
 import { Layout } from './shared/ui/Layout'
+import { DictionaryPage } from './pages/DictionaryPage'
 import { PlaceholderPage } from './pages/PlaceholderPage'
 import { SettingsPage } from './pages/SettingsPage'
 
@@ -14,15 +15,7 @@ function App() {
       <Routes>
         <Route element={<Layout />}>
           <Route index element={<Navigate to="/dictionary" replace />} />
-          <Route
-            path="/dictionary"
-            element={
-              <PlaceholderPage
-                titleKey="page.dictionary.title"
-                subtitleKey="page.dictionary.subtitle"
-              />
-            }
-          />
+          <Route path="/dictionary" element={<DictionaryPage />} />
           <Route
             path="/decks"
             element={

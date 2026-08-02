@@ -35,6 +35,34 @@ export const ru = {
   'settings.language.en': 'English',
 
   'common.comingSoon': 'Этот раздел появится на следующих этапах.',
+  'common.save': 'Сохранить',
+  'common.cancel': 'Отмена',
+  'common.edit': 'Изменить',
+  'common.delete': 'Удалить',
+
+  'dictionary.add': 'Добавить слово',
+  'dictionary.search': 'Поиск по словам, переводам и источнику',
+  'dictionary.onlyFavorites': 'Только избранные',
+  'dictionary.total': 'Всего слов: {count}',
+  'dictionary.found': 'Найдено: {count}',
+  'dictionary.empty': 'Словарь пока пуст. Добавьте первое слово.',
+  'dictionary.emptyFavorites': 'В избранном пока пусто.',
+  'dictionary.notFound': 'Ничего не найдено.',
+
+  'word.term': 'Слово',
+  'word.termPlaceholder': 'Например, serendipity',
+  'word.translation': 'Перевод',
+  'word.translationPlaceholder': 'Например, счастливая случайность',
+  'word.source': 'Откуда я узнала это слово?',
+  'word.sourcePlaceholder': 'YouTube, книга, репетитор…',
+  'word.sourceHint': 'Необязательно',
+  'word.from': 'из',
+  'word.newTitle': 'Новое слово',
+  'word.editTitle': 'Изменить слово',
+  'word.addToFavorites': 'Добавить в избранное',
+  'word.removeFromFavorites': 'Убрать из избранного',
+  'word.deleteConfirm': 'Удалить слово «{term}»? Это действие нельзя отменить.',
+  'word.deleteTitle': 'Удаление слова',
 } as const
 
 export type TranslationKey = keyof typeof ru
@@ -73,6 +101,34 @@ export const en: Record<TranslationKey, string> = {
   'settings.language.en': 'English',
 
   'common.comingSoon': 'This section is coming in the next stages.',
+  'common.save': 'Save',
+  'common.cancel': 'Cancel',
+  'common.edit': 'Edit',
+  'common.delete': 'Delete',
+
+  'dictionary.add': 'Add word',
+  'dictionary.search': 'Search words, translations and sources',
+  'dictionary.onlyFavorites': 'Favorites only',
+  'dictionary.total': 'Words: {count}',
+  'dictionary.found': 'Found: {count}',
+  'dictionary.empty': 'Your dictionary is empty. Add your first word.',
+  'dictionary.emptyFavorites': 'Nothing in favorites yet.',
+  'dictionary.notFound': 'Nothing found.',
+
+  'word.term': 'Word',
+  'word.termPlaceholder': 'For example, serendipity',
+  'word.translation': 'Translation',
+  'word.translationPlaceholder': 'For example, счастливая случайность',
+  'word.source': 'Where did I learn this word?',
+  'word.sourcePlaceholder': 'YouTube, a book, my tutor…',
+  'word.sourceHint': 'Optional',
+  'word.from': 'from',
+  'word.newTitle': 'New word',
+  'word.editTitle': 'Edit word',
+  'word.addToFavorites': 'Add to favorites',
+  'word.removeFromFavorites': 'Remove from favorites',
+  'word.deleteConfirm': 'Delete the word “{term}”? This cannot be undone.',
+  'word.deleteTitle': 'Delete word',
 }
 
 export const translations: Record<Language, Record<TranslationKey, string>> = {
