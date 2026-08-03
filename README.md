@@ -87,6 +87,15 @@ npm run app:build
 
 Иконка приложения собирается из `app-icon.png` командой `npx tauri icon app-icon.png`.
 
+Важно: после смены иконки обычная пересборка её не подхватит — Cargo не считает
+замену файла иконки поводом заново встраивать ресурсы Windows. Нужно удалить
+отпечатки сборки и собрать заново:
+
+```bash
+rm -rf src-tauri/target/release/build/english-cardbook-* src-tauri/target/release/.fingerprint/english-cardbook-*
+npm run app:build
+```
+
 ## Где хранятся данные
 
 Всё лежит в localStorage браузера под ключами `english-cardbook:*`.
