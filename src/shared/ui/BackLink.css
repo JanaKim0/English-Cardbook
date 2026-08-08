@@ -1,0 +1,23 @@
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+  padding: 6px var(--space-sm) 6px var(--space-xs);
+  background: none;
+  border: none;
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.back-link:hover {
+  background: var(--surface-alt);
+  color: var(--accent-strong);
+}
+
+.back-link__arrow {
+  font-size: 18px;
+  line-height: 1;
+}
